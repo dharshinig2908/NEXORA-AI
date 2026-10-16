@@ -1,0 +1,109 @@
+{
+  "dashboard": {
+    "name": "NEXORA AI",
+    "welcomeMessage": "Welcome back, Innovator!",
+    "focusMinutes": 25
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "AI Smart Dashboard",
+      "category": "Development",
+      "progress": 85,
+      "status": "In Progress"
+    },
+    {
+      "id": 2,
+      "name": "UI Innovation",
+      "category": "Design",
+      "progress": 65,
+      "status": "In Progress"
+    },
+    {
+      "id": 3,
+      "name": "Portfolio Website",
+      "category": "Web Design",
+      "progress": 100,
+      "status": "Completed"
+    },
+    {
+      "id": 4,
+      "name": "AI Chat Assistant",
+      "category": "Artificial Intelligence",
+      "progress": 40,
+      "status": "In Progress"
+    },
+    {
+      "id": 5,
+      "name": "Analytics Engine",
+      "category": "Data Analytics",
+      "progress": 55,
+      "status": "In Progress"
+    },
+    {
+      "id": 6,
+      "name": "Mobile App UI",
+      "category": "App Design",
+      "progress": 25,
+      "status": "Planning"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Complete dashboard layout",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Connect JavaScript features",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Design project cards",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Build AI chat interface",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Test focus timer",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Optimize mobile responsiveness",
+      "completed": false
+    }
+  ],
+  "analytics": [
+    {
+      "label": "Monday",
+      "productivity": 55
+    },
+    {
+      "label": "Tuesday",
+      "productivity": 70
+    },
+    {
+      "label": "Wednesday",
+      "productivity": 62
+    },
+    {
+      "label": "Thursday",
+      "productivity": 85
+    },
+    {
+      "label": "Friday",
+      "productivity": 75
+    },
+    {
+      "label": "Saturday",
+      "productivity": 92
+    }
+  ]
+}

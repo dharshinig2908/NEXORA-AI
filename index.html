@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>NEXORA AI | Smart Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a href="#home" class="brand">
+        <span class="brand-logo">N</span>
+        <span>NEXORA<small>AI WORKSPACE</small></span>
+      </a>
+
+      <p class="nav-heading">WORKSPACE</p>
+      <nav class="sidebar-nav">
+        <a href="#home" class="nav-item active">⌂ Dashboard</a>
+        <a href="#analytics" class="nav-item">◈ Analytics</a>
+        <a href="#projects" class="nav-item">▦ Projects</a>
+        <a href="#tasks" class="nav-item">✓ My Tasks</a>
+        <a href="#assistant" class="nav-item">✧ AI Assistant</a>
+        <a href="#focus" class="nav-item">◷ Focus Room</a>
+      </nav>
+
+      <div class="upgrade-card">
+        <span>✦ NEXORA AI</span>
+        <h3>Think beyond limits.</h3>
+        <p>Your personal productivity command center.</p>
+        <a href="#assistant">Meet your AI →</a>
+      </div>
+
+      <div class="sidebar-profile">
+        <div class="avatar">N</div>
+        <div><strong>Innovator</strong><small>Workspace member</small></div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="home">
+
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL COMMAND CENTER</p>
+          <h2>Smart Workspace</h2>
+        </div>
+        <div class="top-actions">
+          <input class="global-search" type="search"
+            placeholder="Search projects and tasks..." aria-label="Search dashboard">
+          <button id="themeToggle" class="top-icon" type="button"
+            aria-label="Toggle theme">☼</button>
+          <button id="fullscreenBtn" class="top-icon" type="button"
+            aria-label="Toggle fullscreen">⛶</button>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR FUTURE STARTS HERE</p>
+          <h1>Welcome back,<br><span>Innovator.</span></h1>
+          <p>Turn your ideas into action. Your next breakthrough starts today.</p>
+          <a class="primary-button" href="#projects">Explore workspace ↗</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="hero-planet">N</div>
+          <span class="planet-dot"></span>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-grid" aria-label="Workspace statistics">
+        <article class="stat-card">
+          <span>ACTIVE PROJECTS</span>
+          <strong id="activeProjects">0</strong>
+          <small>Projects in progress</small>
+        </article>
+        <article class="stat-card">
+          <span>TOTAL TASKS</span>
+          <strong id="totalTasks">0</strong>
+          <small>Tasks in your workspace</small>
+        </article>
+        <article class="stat-card">
+          <span>COMPLETED TASKS</span>
+          <strong id="completedTasks">0</strong>
+          <small>Keep up the momentum</small>
+        </article>
+        <article class="stat-card">
+          <span>PRODUCTIVITY</span>
+          <strong id="productivity">82%</strong>
+          <small>Sample productivity score</small>
+        </article>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section class="panel" id="analytics">
+        <div class="section-heading">
+          <div><p class="eyebrow">PERFORMANCE</p><h2>Productivity Analytics</h2></div>
+          <span class="task-tag">WEEKLY OVERVIEW</span>
+        </div>
+        <div id="analyticsChart" class="chart-bars"></div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="panel" id="projects">
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR WORK</p><h2>Active Projects</h2></div>
+          <button class="secondary-button" id="newProjectBtn" type="button">
+            + New Project
+          </button>
+        </div>
+        <div class="project-grid" id="projectList"></div>
+      </section>
+
+      <!-- TASKS AND FOCUS TIMER -->
+      <section class="dashboard-grid">
+        <section class="panel" id="tasks">
+          <div class="section-heading">
+            <div><p class="eyebrow">STAY ON TRACK</p><h2>My Tasks</h2></div>
+            <span class="task-tag" id="taskProgress">0 completed</span>
+          </div>
+          <div class="task-list" id="taskList"></div>
+        </section>
+
+        <section class="panel focus-panel" id="focus">
+          <div class="section-heading">
+            <div><p class="eyebrow">DEEP WORK</p><h2>Focus Room</h2></div>
+            <span class="task-tag">POMODORO</span>
+          </div>
+          <div class="focus-clock">
+            <div class="focus-clock-inner">
+              <span id="timerDisplay">25:00</span>
+              <small>MINUTES TO FOCUS</small>
+            </div>
+          </div>
+          <div class="timer-controls">
+            <button class="primary-button" id="startTimer" type="button">Start</button>
+            <button class="secondary-button" id="resetTimer" type="button">Reset</button>
+          </div>
+          <p class="focus-note">One task at a time. Make it count.</p>
+        </section>
+      </section>
+
+      <!-- AI ASSISTANT -->
+      <section class="panel assistant-panel" id="assistant">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR PERSONAL AI COMPANION</p>
+            <h2>Meet NEXORA Assistant</h2>
+          </div>
+          <span class="online-indicator">● ONLINE</span>
+        </div>
+
+        <div class="assistant-intro">
+          <div class="assistant-avatar">✧</div>
+          <div>
+            <strong>NEXORA Intelligence</strong>
+            <p>Hello, Innovator! I'm here to help you organize your work and plan your next move.</p>
+          </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages" aria-live="polite">
+          <div class="chat-bubble">
+            Welcome! Ask me about productivity, planning, or your dashboard.
+          </div>
+        </div>
+
+        <div class="suggestion-chips">
+          <button class="suggestion-chip" type="button" data-prompt="Help me plan my day">Plan my day</button>
+          <button class="suggestion-chip" type="button" data-prompt="Give me productivity tips">Productivity tips</button>
+          <button class="suggestion-chip" type="button" data-prompt="How can I focus better?">Improve focus</button>
+        </div>
+
+        <form class="chat-input" id="chatForm">
+          <input id="chatInput" type="text"
+            placeholder="Ask NEXORA anything..." autocomplete="off"
+            aria-label="Message to NEXORA" required>
+          <button class="primary-button" type="submit">Send ↗</button>
+        </form>
+        <p class="assistant-disclaimer">Demo assistant · Responses are generated locally, not by a live AI model.</p>
+      </section>
+
+      <!-- ACTIVITY FEED -->
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR WORKSPACE</p><h2>Recent Activity</h2></div>
+        </div>
+        <div class="activity-feed" id="activityFeed">
+          <div class="activity-item">
+            <span class="activity-dot"></span>
+            <div><strong>Workspace initialized</strong><small>Your NEXORA journey starts here.</small></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>✦ NEXORA AI</span>
+        <span>Imagine. Organize. Achieve.</span>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- NEW PROJECT MODAL -->
+  <div class="modal-backdrop" id="projectModal" hidden>
+    <section class="modal-card" role="dialog"
+      aria-modal="true" aria-labelledby="modalTitle">
+      <button id="closeModal" class="modal-close" type="button"
+        aria-label="Close">×</button>
+      <p class="eyebrow">EXPAND YOUR HORIZON</p>
+      <h2 id="modalTitle">Create a project</h2>
+      <form id="projectForm">
+        <label for="projectName">Project name</label>
+        <input id="projectName" type="text"
+          placeholder="e.g. Future Portfolio" required maxlength="70">
+        <label for="projectCategory">Category</label>
+        <input id="projectCategory" type="text"
+          placeholder="e.g. Development" required maxlength="50">
+        <div class="modal-actions">
+          <button class="secondary-button" id="cancelProject"
+            type="button">Cancel</button>
+          <button class="primary-button" type="submit">Create project</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
